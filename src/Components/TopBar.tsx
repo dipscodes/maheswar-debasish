@@ -1,10 +1,8 @@
-import Box from "./Box";
-
 const TopBar = () => {
   return (
-    <Box heightString={"80px"} bgColor={"saffron-topbar"} className="bg-">
-      <div className="flex flex-row justify-center h-full text-persian-blue items-center"><span>Maheswar Debasish</span></div>
-    </Box>
+    <div className="w-screen h-[80px] bg-saffron-topbar h-min-[80px]">
+      <div className="flex flex-row justify-center h-full text-persian-blue items-center text-3xl"><span>Maheswar Debasish</span></div>
+    </div>
   );
 }
 
