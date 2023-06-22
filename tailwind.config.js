@@ -17,6 +17,8 @@ module.exports = {
         'discord-bg-2': '#060607',
         'discord-cross-color': '#6f7278',
         'discord-text-color-1': '#dbdee1',
+        'saffron-topbar': '#F4C430',
+        'persian-blue': '#1c39bb',
       },
     },
   },
