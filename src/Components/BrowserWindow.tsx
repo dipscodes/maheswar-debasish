@@ -5,15 +5,15 @@ import Pricing from "./Pricing";
 import TopBar from "./TopBar";
 
 const BrowserWindow = () => {
-    return (
-        <div>
-            <TopBar />
-            <Banner />
-            <Pricing />
-            <Achievements />
-            <BottomBar />
-        </div>
-    );
+  return (
+    <div>
+      <TopBar />
+      <Banner />
+      <Pricing />
+      <Achievements />
+      <BottomBar />
+    </div>
+  );
 }
 
 export default BrowserWindow;

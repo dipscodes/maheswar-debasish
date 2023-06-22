@@ -1,9 +1,8 @@
 interface Props {
-    heightString: string,
-    className?: string,
-    bgColor?: string,
-    bgClass?: string,
-    children: React.ReactElement | React.ReactElement[]
+  heightString: string,
+  className?: string,
+  bgColor?: string,
+  children: React.ReactElement | React.ReactElement[]
 }
 
 /**
@@ -15,18 +14,18 @@ interface Props {
  * @returns a div of given height and background color
  */
 
-const Box = ({ heightString, bgColor, bgClass, children, className }: Props) => {
-    return (
-        <div className={`w-screen h-[${heightString}] h-min-[${heightString}] ${bgClass} ${className} bg-[${bgColor}]`}>
-            {children}
-        </div>
-    );
+const Box = ({ heightString, bgColor, children, className }: Props) => {
+  const classN: string = `w-screen h-[${heightString}] min-h-[80px] bg-${bgColor} ${className}`
+  return (
+    <div className={classN} >
+      {children}
+    </div>
+  );
 }
 
 Box.defaultProps = {
-    bgClass: '',
-    bgColor: '',
-    className: ''
+  bgColor: '',
+  className: ''
 }
 
 export default Box;
