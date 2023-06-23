@@ -7,7 +7,6 @@ import TopBar from "./TopBar";
 const BrowserWindow = () => {
   return (
     <div>
-      <TopBar />
       <Banner />
       <Pricing />
       <Achievements />

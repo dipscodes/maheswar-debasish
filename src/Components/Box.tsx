@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 interface Props {
   heightString: string,
   className?: string,
@@ -15,9 +17,15 @@ interface Props {
  */
 
 const Box = ({ heightString, bgColor, children, className }: Props) => {
-  const classN: string = `w-screen h-[${heightString}] min-h-[80px] bg-${bgColor} ${className}`
+  const [classes, setClasses] = useState('');
+  
+  useEffect(() => {
+    const classN: string = `w-screen h-[${heightString}] min-h-[80px] bg-${bgColor} ${className}`;
+    setClasses(classN);
+    console.log(classN);
+  }, [classes, heightString, bgColor, className])
   return (
-    <div className={classN} >
+    <div className={classes} >
       {children}
     </div>
   );
