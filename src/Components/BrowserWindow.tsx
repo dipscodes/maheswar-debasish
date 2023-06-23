@@ -1,13 +1,14 @@
 import Achievements from "./Achievements";
 import Banner from "./Banner";
 import BottomBar from "./BottomBar";
+import Portfolio from "./Portfolio";
 import Pricing from "./Pricing";
-import TopBar from "./TopBar";
 
 const BrowserWindow = () => {
   return (
     <div>
       <Banner />
+      <Portfolio />
       <Pricing />
       <Achievements />
       <BottomBar />
