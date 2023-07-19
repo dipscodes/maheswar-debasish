@@ -14,6 +14,6 @@ const BrowserWindow = () => {
       <BottomBar />
     </div>
   );
-}
+};
 
 export default BrowserWindow;
