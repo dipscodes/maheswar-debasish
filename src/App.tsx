@@ -1,10 +1,8 @@
-import './App.css';
-import BrowserWindow from './components/BrowserWindow';
+import "./App.css";
+import BrowserWindow from "./components/BrowserWindow";
 
 function App() {
-  return (
-    <BrowserWindow />
-  );
+  return <BrowserWindow />;
 }
 
 export default App;
