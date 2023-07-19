@@ -1,5 +1,5 @@
 import "./App.css";
-import BrowserWindow from "./components/BrowserWindow";
+import BrowserWindow from "./BrowserWindow";
 
 function App() {
   return <BrowserWindow />;
