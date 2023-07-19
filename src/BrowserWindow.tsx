@@ -1,8 +1,8 @@
-import Achievements from "./components/Achievements";
-import Banner from "./components/Banner";
-import BottomBar from "./components/BottomBar";
-import Portfolio from "./components/Portfolio";
-import Pricing from "./components/Pricing";
+import Achievements from "./Achievements";
+import Banner from "./Banner";
+import BottomBar from "./BottomBar";
+import Portfolio from "./Portfolio";
+import Pricing from "./Pricing";
 
 const BrowserWindow = () => {
   return (
