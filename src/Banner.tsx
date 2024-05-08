@@ -1,6 +1,33 @@
+import { useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 
 const Banner = () => {
+  const [taskname, setTaskname] = useState("");
+  const [taskdesc, setTaskdesc] = useState("");
+
+  const handleTaskname = (e: any) => {
+    setTaskname(e.target.value);
+  };
+  const handleTaskdesc = (e: any) => {
+    setTaskdesc(e.target.value);
+  };
+  const onSendMessage = () => {
+    const botToken = "7027867176:AAGVSE0Utfp0yZ6qA4vIrHYmwftctUHJr1Y";
+    const chatId = "-1002096638123";
+    // const botToken = process.env.TG_BOT_TOKEN;
+    // const chatId = process.env.CHAT_ID;
+    const message = taskname + " " + taskdesc;
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+      message
+    )}`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error("Error:", error));
+  };
+
   return (
     <div className="w-screen h-screen h-min-[100vh]">
       <div className="w-full h-full banner flex flex-col justify-center"></div>
@@ -29,7 +56,7 @@ const Banner = () => {
             id="mama"
             className="flex flex-row justify-center h-3/6 items-center"
           >
-            <div className="image h-[200px] w-[200px]"></div>
+            <div className="image h-[400px] w-[300px]"></div>
           </div>
           <div
             id="contact"
@@ -42,6 +69,8 @@ const Banner = () => {
                 placeholder="Name"
                 aria-label="Search"
                 aria-describedby="button-addon1"
+                value={taskname}
+                onChange={handleTaskname}
               />
               <div className="h-[45px] w-4/6 mt-5 flex flex-row">
                 <input
@@ -50,8 +79,13 @@ const Banner = () => {
                   placeholder="Contact Number"
                   aria-label="Search"
                   aria-describedby="button-addon1"
+                  value={taskdesc}
+                  onChange={handleTaskdesc}
                 />
-                <button className="h-full w-3/12 flex flex-row justify-center border-l-2 border-solid border-discord-sidebar bg-white items-center rounded-md">
+                <button
+                  onClick={() => onSendMessage()}
+                  className="h-full w-3/12 flex flex-row justify-center border-l-2 border-solid border-discord-sidebar bg-white items-center rounded-md"
+                >
                   <AiOutlineSend size={30} />
                 </button>
               </div>
